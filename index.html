@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker App</title>
+</head>
+<body>
+    <h1>Expense Tracker App</h1>
+    <div class="input-section">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+            <option value="Food & Beverage">Food & Beverage</option>
+            <option value="Rent">Rent</option>
+            <option value="Transport">Transport</option>
+            <option value="Relaxing">Relaxing</option>
+            <option value="Miscellaneous ">Miscellaneous</option>
+        </select>
+        <label for="amount-input">Amount ₹ :</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <button id="add-btn">Add</button>
+        <button id="print-btn">Print</button>
+        <button id="export-btn">Export Data</button>
+    </div>
+    <div class="limit-section">
+        <label for="limit-input">Set Spending Limit ₹ :</label>
+        <input type="number" id="limit-input">
+        <button id="set-limit-btn">Set Limit</button>
+    </div>
+    <div class="search-section">
+        <label for="search-input">Search Expenses:</label>
+        <input type="text" id="search-input" placeholder="Search by category or date">
+    </div>
+    <div class="summary-section">
+        <h2>Category-wise Summary</h2>
+        <table id="summary-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody id="summary-table-body">
+            </tbody>
+        </table>
+    </div>
+    <div class="expenses-list">
+        <h2>Expenses List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td id="total-amount"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="report-section">
+        <h2>Monthly Report</h2>
+        <label for="report-month-input">Select Month:</label>
+        <input type="month" id="report-month-input">
+        <button id="generate-report-btn">Generate Report</button>
+        <table id="report-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="report-table-body">
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
