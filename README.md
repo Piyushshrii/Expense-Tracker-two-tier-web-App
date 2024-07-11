@@ -74,6 +74,39 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
+Create your docker-compose.yml:
+```
+version: '3.7'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+```
+Place your application files (index.html, style.css, script.js) in the same directory.
+
+Build and run the Docker container:
+```
+docker-compose up -d
+ ```
+## 6. Access the Application
+Open your web browser and navigate to:
+```
+http://your-ec2-public-ip
+```
+## 7. Stop the Application
+To stop the Docker container, use:
+```
+docker stop $(docker ps -q)
+```
+## Conclusion
+You have successfully deployed the "Expense Tracker" application on an AWS EC2 instance using Docker. Enjoy your web application!
+
+This `README.md` file includes all the necessary steps and commands to deploy your application. Adjust the content as needed based on your specific setup and application details.
+
+
+
+
 
 
 
